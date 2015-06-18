@@ -28,3 +28,18 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+//Enable upload of SVG files to media library
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+	// add the file extension to the array
+
+	$existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+	return $existing_mimes;
+
+}
