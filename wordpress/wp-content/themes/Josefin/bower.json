@@ -9,7 +9,9 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "angular-material": "~0.10.0",
-    "angular": "~1.4.1"
+    "angular": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "angular-sanitize": "~1.4.1"
   },
   "overrides": {
     "modernizr": {

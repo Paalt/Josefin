@@ -1,2 +1,2 @@
-angular.module('Josefin', ['ngAnimate', 'ngAria', 'ngMaterial']);
-//'ngRoute', 'ngTouch', 'ngSanitize', 'ngResource', , 'wp.api', 'formly'
+angular.module('Josefin', ['ngAnimate', 'ngAria', 'ngMaterial', 'ngSanitize', 'ngResource']);
+//'ngRoute', 'ngTouch', 'ngSanitize', 'wp.api', 'formly'

@@ -2,8 +2,9 @@
   "dependencies": {
     "main.js": {
       "files": [
-	  	"scripts/app/directives/*",
 	  	"scripts/app/*",
+		"scripts/app/directives/*",
+		"scripts/app/services/*",
         "scripts/main.js"
       ],
       "main": true
