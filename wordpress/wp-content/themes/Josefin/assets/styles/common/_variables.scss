@@ -1,0 +1,28 @@
+//Content font
+@font-face {
+    font-family: 'Helvetica-Neue';
+    src: url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.woff') format('woff'), 
+         url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.otf') format('opentype'),
+         url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.ttf') format('truetype'),
+         url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.SVG') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+//Custom Scrollbar
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+	background-color: black;
+}
+
+//Custom Curosr 
+html, body {
+	cursor: url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/mouse.png'), auto;
+	}
+
+
+// Colors
+$brand-primary: #27ae60;
