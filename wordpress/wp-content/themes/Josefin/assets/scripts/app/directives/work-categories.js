@@ -27,13 +27,9 @@ angular.module('Josefin')
 			}],
 			link: ['scope', function(scope){
 				
-				
 				post.news().success(function(res){
 					scope.posts = res;
-				});
-				
-				post.media().success(function(res){
-					scope.media = res;
+					console.log(scope.posts);
 				});
 				
 				scope.posts = $sce.trustAsHtml(scope.posts);	

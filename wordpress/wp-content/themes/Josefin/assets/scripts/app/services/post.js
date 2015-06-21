@@ -3,7 +3,7 @@ angular.module('Josefin')
 		"use strict";
 		return {
 			work: function($routeParams) {
-				return $http({method: 'GET', url: 'wp-json/posts/?filter[cat]=4'});
+				return $http({method: 'GET', url: 'wp-json/posts/?filter[cat]=18'});
 			},
 			media: function($routeParams) {
 				return $http({method: 'GET', url: 'wp-json/media/'});

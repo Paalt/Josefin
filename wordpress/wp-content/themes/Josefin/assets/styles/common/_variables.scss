@@ -1,15 +1,17 @@
-//Content font
+/** CONTENT FONT **/
 @font-face {
     font-family: 'Helvetica-Neue';
     src: url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.woff') format('woff'), 
          url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.otf') format('opentype'),
          url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.ttf') format('truetype'),
          url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/fonts/HelveticaNeue.SVG') format('svg');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
    }
+ 
+$main-font : "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-//Custom Scrollbar
+/** CUSTOM SCROLLBAR **/
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -18,11 +20,12 @@
 	background-color: black;
 }
 
-//Custom Curosr 
+/** CUSTOM CURSOR **/ 
 html, body {
 	cursor: url('http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/mouse.png'), auto;
 	}
+	
+/** COLORS **/
 
-
-// Colors
-$brand-primary: #27ae60;
+$main : rgb(0, 0, 0);
+$bg : rgb(255, 255, 255);

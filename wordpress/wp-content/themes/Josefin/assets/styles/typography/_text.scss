@@ -1,0 +1,27 @@
+	/*------------------------------------*\
+		#TEXT
+	\*------------------------------------*/
+	
+	/* Text-Related Elements */
+	body p, html p {
+	  line-height: 1.2;
+	}
+	
+	p {
+	  padding-bottom: 1em;
+	}
+	
+	/* Blockquote */
+	blockquote {
+	  font-style: italic;
+	  border-left: 1px solid #ebebeb;
+	  color: #ebebeb;
+	  padding-left: 1em;
+	  margin-bottom: 1em;
+	}
+	
+	ol, ul {
+	  margin: 0;
+	  padding: 0;
+	  list-style: none;
+	}

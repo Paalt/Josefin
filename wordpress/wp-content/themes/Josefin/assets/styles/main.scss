@@ -1,3 +1,42 @@
+/**
+ * CSS STYLE SHEET - JOSEFIN JOHANSSON STUDIO
+ * TABLE OF CONTENTS - based generally on Harry Roberts excellent CSS Guidelines http://cssguidelin.es
+ */
+ 
+/**
+ * CONTENTS
+ *
+ * COMMON
+ * Variables............SASS vairables
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * TYPOGRAPHY
+ * Headings.............H1–H6 styles.
+ * Text.................Text styles.
+ * Links................Link styles.
+ *
+ * COMPONENTS
+ * Buttons..............Button elements.
+ * Forms................Form elements.
+ * wp-classes...........Classes for wordpress.
+ *
+ * LAYOUTS
+ * Footer...............Styles for the footer
+ * Header...............Styles for the header
+ * Pages................Styles for the pages
+ * Posts................Styles for the posts
+ * Sidebar..............Styles for the sidebar
+ 
+ */
+
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/
 @import "common/_variables";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
@@ -5,11 +44,27 @@
 // endbower
 
 @import "common/_global";
+
+/*------------------------------------*\
+    #TOOLS
+\*------------------------------------*/
+@import "tools/_mixins";
+@import "tools/_extensions";
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+@import "typography/_headings";
+@import "typography/_links";
+@import "typography/_text";
+/*------------------------------------*\
+    #COMPONENTS
+\*------------------------------------*/
 @import "components/_buttons";
-@import "components/_comments";
 @import "components/_forms";
-@import "components/_grid";
 @import "components/_wp-classes";
+/*------------------------------------*\
+    #LAYOUTS
+\*------------------------------------*/
 @import "layouts/_header";
 @import "layouts/_sidebar";
 @import "layouts/_footer";
