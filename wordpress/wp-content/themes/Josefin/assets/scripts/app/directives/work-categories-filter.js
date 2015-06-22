@@ -1,5 +1,5 @@
 angular.module('Josefin')
-	.directive('work-categories-filter', ['SiteURL', function(SiteURL) {
+	.directive('workCategoriesFilter', ['SiteURL', function(SiteURL) {
 		"use strict";
 		return {
 			replace: true,
@@ -9,7 +9,7 @@ angular.module('Josefin')
 				post: "=",
 			},
 			templateUrl: SiteURL + "directives/bs-posts-list.php",
-			link: ['scope', 'workCategoriesCtrl', function(scope, workCategoriesCtrl){
+			link: function(scope, workCategoriesCtrl){
 				
 				scope.expand = function(){
 					if (workCategoriesCtrl.getExpansionStatus() === true) {
@@ -22,6 +22,6 @@ angular.module('Josefin')
 					workCategoriesCtrl.setActivePost(scope.post);	
 				};
 
-			}]	
+			}	
 		};
 	}]);

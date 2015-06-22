@@ -1,4 +1,22 @@
 	/*------------------------------------*\
 		#LINKS
 	\*------------------------------------*/
+	a {
+		font-family: $main-font;
+		color: $main;
+		text-decoration: none;
+		}
+		
+	a:hover {
+		text-decoration: underline;
+		}
+		
+	a:active, a visited {
+		color: $main;
+		}
+	
+	.active {
+		text-decoration: underline;
+		}
+	
 

@@ -159,4 +159,10 @@
 	.subheading {
 	  font-weight: normal;
 	}
+	
+	/* SEO HEADING - H1 tag that have to be there for the robots, but will be invisible for everyone else */
+	.seo-header {
+		font-size: 0.01rem;
+		color: $bg;
+		}
 

@@ -3,6 +3,7 @@
     "main.js": {
       "files": [
 	  	"scripts/app/*",
+		"scripts/app/controllers/*",
 		"scripts/app/directives/*",
 		"scripts/app/services/*",
         "scripts/main.js"

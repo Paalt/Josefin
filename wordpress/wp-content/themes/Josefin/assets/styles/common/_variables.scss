@@ -17,7 +17,7 @@ $main-font : "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grand
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
-	background-color: black;
+	background-color: rgb(15, 15, 15);
 }
 
 /** CUSTOM CURSOR **/ 
@@ -27,5 +27,5 @@ html, body {
 	
 /** COLORS **/
 
-$main : rgb(0, 0, 0);
+$main : rgb(15, 15, 15);
 $bg : rgb(255, 255, 255);

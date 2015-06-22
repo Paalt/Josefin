@@ -1,4 +1,5 @@
 // ## Globals
+var ngAnnotate   = require('gulp-ng-annotate');
 var argv         = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
@@ -18,7 +19,6 @@ var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
-var ngAnnotate = require('gulp-ng-annotate');
 var uglify       = require('gulp-uglify');
 
 // See https://github.com/austinpray/asset-builder
@@ -128,8 +128,8 @@ var jsTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
     })
-    .pipe(concat, filename)
 	.pipe(ngAnnotate)
+    .pipe(concat, filename)
     .pipe(uglify)
     .pipe(function() {
       return gulpif(enabled.rev, rev());

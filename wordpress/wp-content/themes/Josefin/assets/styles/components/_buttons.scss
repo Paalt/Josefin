@@ -1,0 +1,26 @@
+	/*------------------------------------*\
+		#BUTTONS
+	\*------------------------------------*/
+	
+	/* NAVIGATION BUTTON */
+	#menu-toggle {
+		background-color: #fff;
+		border: 1px solid #fff;
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+		padding: 20px;
+		-webkit-transform: rotate(360deg);  /* to support Safari and Android browser */
+    	-ms-transform: rotate(360deg);  /* to support IE 9 */
+    	transform: rotate(360deg);
+		-webkit-transition: rotate 100ms ease-out;
+		-moz-transition: rotate 100ms ease-out;
+		-o-transition: rotate 100ms ease-out;
+		transition: rotate 100ms ease-out;
+	}
+	
+	#menu-toggle:hover {
+		-webkit-transform: rotate(-90deg);  /* to support Safari and Android browser */
+    	-ms-transform: rotate(-90deg);  /* to support IE 9 */
+    	transform: rotate(-90deg);
+	}
+	

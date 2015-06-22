@@ -9,6 +9,7 @@
  * COMMON
  * Variables............SASS vairables
  * Global...............Globally-available variables and config.
+ * Nav..................Navigation menus
  *
  * TOOLS
  * Mixins...............Useful mixins.
@@ -44,6 +45,7 @@
 // endbower
 
 @import "common/_global";
+@import "common/_nav";
 
 /*------------------------------------*\
     #TOOLS
