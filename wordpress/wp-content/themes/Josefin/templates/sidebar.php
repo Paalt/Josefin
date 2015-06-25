@@ -11,6 +11,10 @@
 			if(is_page( 7 )) {
 				get_template_part('templates/navigation', 'categories');	
 			}
+			
+			if(is_page( 11 )) {
+				get_template_part('templates/navigation', 'exhibition');	
+			}
 		?>
     </div>
    

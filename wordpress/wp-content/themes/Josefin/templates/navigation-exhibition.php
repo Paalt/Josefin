@@ -1,0 +1,1 @@
+<exhibition-menu activeExhibition="catCtrl.activeExhibition"></exhibition-menu->

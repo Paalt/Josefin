@@ -38,7 +38,32 @@
       init: function() {
         // JavaScript to be fired on the about us page
       }
-    }
+    },
+	// Exhibition
+    'exhibitions': {
+      init: function() {
+        var mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			direction: 'vertical',
+			freeModeMomentum: true,
+			freeModeMomentumRatio: 1,
+			speed: 1000,
+			mousewheelControl: true,
+			paginationClickable: true,
+			loop: false,
+			
+			// If we need pagination
+			pagination: '.swiper-pagination',
+			
+			paginationBulletRender: function (index, className) {
+			  return '<span class="' + className + '">' + (index + 1) + '</span>';
+		  }
+		  });        
+      },
+      finalize: function() {
+        // JavaScript to be fired on the exhibitions page, after the init JS
+      }
+    },
   };
 
   // The routing fires all common scripts, followed by the page specific scripts.

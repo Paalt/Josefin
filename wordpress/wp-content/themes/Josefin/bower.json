@@ -13,7 +13,8 @@
     "angular-resource": "~1.4.1",
     "angular-sanitize": "~1.4.1",
     "api-check": "~7.5.0",
-    "angular-formly": "~6.15.1"
+    "angular-formly": "~6.15.1",
+    "swiper": "~3.0.8"
   },
   "overrides": {
     "modernizr": {
