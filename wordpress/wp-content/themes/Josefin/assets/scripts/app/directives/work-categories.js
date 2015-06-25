@@ -1,12 +1,9 @@
 angular.module('Josefin')
-	.directive('workCategories', ['post', '$sce', 'SiteURL', function(post, $sce, SiteURL) {
+	.directive('workCategories', ['post', 'SiteURL', function(post, SiteURL) {
 	"use strict";	
 	  return {
 		restrict: 'E',
 		replace: true,
-		scope: {
-				expanded: '@'	
-			},
 		templateUrl: SiteURL + 'directives/work-categories.php',
 		controller: function($scope){
 				
@@ -34,21 +31,6 @@ angular.module('Josefin')
 					$scope.byPostSmall += 4;
 					return $scope.byPostSmall;
 				};
-			
-				this.setActivePost = function(post){
-					$scope.activePost = post.ID;
-				};
-
-				$scope.expanded = false;
-				
-				this.expand = function(){
-					$scope.expanded = !$scope.expanded;	
-				};
-				
-				this.getExpansionStatus = function(){
-					return $scope.expanded;	
-				};
-				
 			},
 			link: function(scope){
 				scope.r = 0.00;
@@ -95,8 +77,6 @@ angular.module('Josefin')
 				scope.createLayoutBlock = function(n) {		
 					return new Array(n);	
 				};
-				
-				scope.posts = $sce.trustAsHtml(scope.posts);	
 			}	
 		};
 	}]);

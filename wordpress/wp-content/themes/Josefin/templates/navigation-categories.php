@@ -1,0 +1,1 @@
+<work-categories-filter category="catCtrl.category"></work-categories-filter>

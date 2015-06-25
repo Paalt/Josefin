@@ -5,8 +5,11 @@ angular.module('Josefin')
 			work: function($routeParams) {
 				return $http({method: 'GET', url: 'wp-json/posts?filter[cat]=18&filter[posts_per_page]=999'});
 			},
-			media: function($routeParams) {
-				return $http({method: 'GET', url: 'wp-json/media/'});
+			contact: function($routeParams) {
+				return $http({method: 'GET', url: 'wp-json/posts?filter[cat]=24&filter[posts_per_page]=999'});
+			},
+			categories: function($routeParams) {
+				return $http({method: 'GET', url: 'wp-json/taxonomies/category/terms/'});
 			},
 			exhibition: function($routeParams) {
 				return $http({method: 'GET', url: 'wp-json/posts/?filter[cat]=8'});

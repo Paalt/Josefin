@@ -20,7 +20,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
-      <div layout="row">
+      <div layout="row" ng-controller="categoryController as catCtrl">
         <main flex="80" class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->

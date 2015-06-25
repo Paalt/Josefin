@@ -1,25 +1,21 @@
 angular.module('Josefin')
-	.directive('workCategoriesFilter', ['SiteURL', function(SiteURL) {
+	.directive('workCategoriesFilter', ['SiteURL', 'post', function(SiteURL, post) {
 		"use strict";
 		return {
 			replace: true,
 			restrict: "E",
-			require: "^workCategories",
 			scope: {
-				post: "=",
+				category: "="
 			},
-			templateUrl: SiteURL + "directives/bs-posts-list.php",
-			link: function(scope, workCategoriesCtrl){
+			templateUrl: SiteURL + "directives/work-categories-filter.php",
+			link: function(scope){
+	
+				post.categories().success(function(res){
+					scope.categories = res;
+				});	
 				
-				scope.expand = function(){
-					if (workCategoriesCtrl.getExpansionStatus() === true) {
-						workCategoriesCtrl.expand();
-						}
-					workCategoriesCtrl.expand();
-				};
-				
-				scope.setPost = function(){
-					workCategoriesCtrl.setActivePost(scope.post);	
+				scope.setCategory = function(cat){
+					scope.category = cat;	
 				};
 
 			}	

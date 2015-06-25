@@ -223,7 +223,7 @@
 	
 	
 	/*------------------------------------*\
-    #WORK
+    	#WORK
 	\*------------------------------------*/
 	
 	/*** WORK IMAGE FEED ***/
@@ -237,5 +237,58 @@
 		font-size: 0.6rem;
 		letter-spacing: 0.4rem;
 		}
+		
+	/*------------------------------------*\
+    	#CONTACT
+	\*------------------------------------*/
+	
+	/*** STUDIO INFO ***/
+	#studio-info {
+		margin-top: 8rem;
+		}
+	
+	.studio-item, .contact-form, .employees {
+		margin: auto;
+		width: 60%;
+		text-align: center;
+	}
+	
+	.studio-item p, .contact-form p, .employees p {
+		font-size: 0.6rem;
+		letter-spacing: 0.1rem;
+	}
+	
+	.employees p:first-child {
+		font-size: 0.7rem;
+		letter-spacing: 0.1rem;
+		padding-bottom: 0.2em;
+		}
+	
+	.contact-heading h2 {
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+		letter-spacing: 0.1rem;
+	}
+	
+	.employee-name h2 {
+		font-size: 0.9rem;
+		letter-spacing: 0.1rem;	
+		}
+	
+	.contact-form {
+		margin-bottom: 4rem;
+	}
+	
+	#employees-list {
+		margin-top: 4rem;
+		}
+	
+	#conatct-footer {
+		margin-top: 4rem;
+		}	
+	
+
+	
+	
 	
 	

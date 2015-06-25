@@ -6,8 +6,8 @@ angular.module('Josefin')
 			restrict: "E",
 			require: "^workCategories",
 			scope: {
-				post: "=",
-				iterate: "@"
+				iterate: "@",
+				category: "="
 			},
 			templateUrl: SiteURL + "directives/work-layout-block.php",
 			link: function(scope, element, attr, workCategoriesCtrl){
@@ -19,14 +19,7 @@ angular.module('Josefin')
 				post.work().success(function(res){
 					scope.posts = res;
 				});	
-				
-				scope.expand = function(){
-					workCategoriesCtrl.expand();
-				};
-				
-				scope.setPost = function(){
-					workCategoriesCtrl.setActivePost(scope.post);	
-				};
+
 			}	
 		};
 	}]);

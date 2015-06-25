@@ -24,3 +24,15 @@
     	transform: rotate(-90deg);
 	}
 	
+	.btn {
+		padding: 5px 30px 5px 30px;
+		background-color: $main;
+		color: $bg;
+		border: 1px solid $main;
+		font-size: 0.6rem;
+		letter-spacing: 0.1rem;
+	}
+	
+	input[type=submit] {
+		
+		}	

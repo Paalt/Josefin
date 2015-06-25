@@ -5,9 +5,15 @@
     </button>
     
     <div ng-show="menuToggle" class="visibility">
-    	<?php dynamic_sidebar('sidebar-primary'); ?>
+    	<?php 
+			dynamic_sidebar('sidebar-primary'); 
+			
+			if(is_page( 7 )) {
+				get_template_part('templates/navigation', 'categories');	
+			}
+		?>
     </div>
-    
+   
 </section>
 
 
