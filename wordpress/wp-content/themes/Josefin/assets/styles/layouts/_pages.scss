@@ -315,6 +315,29 @@
         align-items: center;
     } 
 	
+	.carousel-button-prev, .carousel-button-next {
+		z-index: 99;
+		height: 20px;
+		width: 17px;
+		right: 20px;
+		position: absolute;	
+	}
+	
+	.carousel-button-prev {
+		background-image: url(http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/arrow-up.svg);
+		top: 200px;
+		}
+	
+	.carousel-button-next {
+		background-image: url(http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/arrow-down.svg);
+		top: 250px;
+		}
+		
+	.swiper-container-vertical>.swiper-pagination {
+		right: 25%;
+		top: 200px;
+		}
+	
 	.swiper-pagination-bullet {
 		display: none;
 		visibility: hidden;
@@ -325,6 +348,43 @@
 		visibility: visible;
 		}
 	
+	.ett-bilde, .to-bilder, .etth-bilde-ettv-tekst {
+		width: 100%;	
+	}
+	
+	.ett-bilde > article > p > a > img {
+		width: 80%;	
+	}
+	
+	.etth-bilde-ettv-tekst > article > p {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 4rem;	
+	}
+	
+	.etth-bilde-ettv-tekst > article > p:first-child {
+		width: 40%;
+		font-size: 6rem;
+	}
+	
+	.etth-bilde-ettv-tekst > article > p:last-child  {
+		width: 55%;
+		text-align: center;
+	}
+	
+	.to-bilder > article > p > a > img {
+		padding: 4rem;
+		vertical-align: middle;		
+	}
+	
+	.to-bilder > article > p > a:first-child > img {
+		width: 60%;	
+	}
+	
+	.to-bilder > article > p > a:last-child > img {
+		width: 40%;
+		
+	}
 
 	
 	

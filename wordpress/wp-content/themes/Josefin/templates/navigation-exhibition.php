@@ -1,1 +1,1 @@
-<exhibition-menu activeExhibition="catCtrl.activeExhibition"></exhibition-menu->
+<exhibition-menu active-exhibition="catCtrl.activeExhibition"></exhibition-menu->

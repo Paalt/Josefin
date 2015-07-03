@@ -14,10 +14,9 @@ angular.module('Josefin')
 					scope.exhibitions = res;
 				});	
 				
-				scope.activeExhibition = function(cat){
-					scope.activeExhibition = cat;	
+				scope.setActiveExhibition = function(exh){
+					scope.activeExhibition = exh;
 				};
-
 			}	
 		};
 	}]);

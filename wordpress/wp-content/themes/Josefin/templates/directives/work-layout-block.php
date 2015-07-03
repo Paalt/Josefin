@@ -5,8 +5,10 @@
             <!-- top-left-large column -->
                 <article ng-if="iterate == byBlock" flex class="large-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'large'}}}">
                     <aside class="work-container" ng-if="$index == byPostLargeMedium">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                        <a ng-href="{{post.link}}">
+                        	<img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                        	<p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
             </div>
