@@ -18,15 +18,19 @@
            <!-- top-right-left-small column -->
                 <article ng-if="iterate == byBlock" flex class="small-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'small'}}}">
                     <aside class="work-container" ng-if="$index == byPostSmall">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                    	<a ng-href="{{post.link}}">
+                            <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                            <p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
                 
                 <article ng-if="iterate == byBlock" flex class="small-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'small'}}}">
                     <aside class="work-container" ng-if="$index == (byPostSmall + 1)">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                    	<a ng-href="{{post.link}}">
+                            <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                            <p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
             </div>
@@ -34,15 +38,19 @@
                 <!-- top-right-right-small column -->
                 <article ng-if="iterate == byBlock" flex class="small-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'small'}}}">
                     <aside class="work-container" ng-if="$index == (byPostSmall + 2)">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                    	<a ng-href="{{post.link}}">
+                            <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                            <p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
                 
                 <article ng-if="iterate == byBlock" flex class="small-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'small'}}}">
                     <aside class="work-container" ng-if="$index == (byPostSmall + 3)">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                        <a ng-href="{{post.link}}">
+                            <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                            <p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
             </div>
@@ -55,8 +63,10 @@
                 <!-- bottom-left-left-medium column -->
                 <article ng-if="iterate == byBlock" flex class="medium-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'medium'}}}">
                     <aside class="work-container" ng-if="$index == byPostLargeMedium">
-                        <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
-                        <p class="work-title">{{post.title | uppercase}}</p>
+                    	<a ng-href="{{post.link}}">
+                            <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
+                            <p class="work-title">{{post.title | uppercase}}</p>
+                        </a>
                     </aside>
                 </article>
             </div>
@@ -64,8 +74,10 @@
                 <!-- bottom-left-right-medium column -->
                 <article ng-if="iterate == byBlock" flex class="medium-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'medium'}}}">
                     <aside class="work-container" ng-if="$index == (byPostLargeMedium + 1)">
+                    <a ng-href="{{post.link}}">
                         <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
                         <p class="work-title">{{post.title | uppercase}}</p>
+                    </a>
                     </aside>
                 </article>
             </div>
@@ -75,8 +87,10 @@
                 <!-- large-right-bottom column -->
                 <article ng-if="iterate == byBlock" flex class="large-post" ng-repeat="post in posts | filter: {terms: {category: {name: category}}} | filter: {terms: {category: {name: 'large'}}}">
                     <aside class="work-container" ng-if="$index == (byPostLargeMedium + 1)">
+                    <a ng-href="{{post.link}}">
                         <img ng-src="{{post.featured_image.source}}" alt="{{post.title}}">
                         <p class="work-title">{{post.title | uppercase}}</p>
+                    </a>
                     </aside>
                 </article>
             </div>

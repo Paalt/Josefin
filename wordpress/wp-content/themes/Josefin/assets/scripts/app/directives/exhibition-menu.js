@@ -10,10 +10,10 @@ angular.module('Josefin')
 			templateUrl: SiteURL + "directives/exhibition-menu.php",
 			link: function(scope){
 	
-				post.categories().success(function(res){
-					scope.exhibitions = res;
-				});	
-				
+				post.exhibition().success(function(res){
+					scope.posts = res;
+				});
+			
 				scope.setActiveExhibition = function(exh){
 					scope.activeExhibition = exh;
 				};

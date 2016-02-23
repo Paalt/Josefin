@@ -5,8 +5,10 @@ angular.module('Josefin')
 		restrict: 'E',
 		replace: true,
 		templateUrl: SiteURL + 'directives/work-categories.php',
+		scope: {
+			page: '@'
+		},
 		controller: function($scope){
-				
 				//Create incremental helper functions for the works display system
 				//For every 8 posts a new layout block is added to the DOM.
 				
@@ -31,6 +33,10 @@ angular.module('Josefin')
 					$scope.byPostSmall += 4;
 					return $scope.byPostSmall;
 				};
+				
+				this.active = function () {
+					return $scope.page;
+				};
 			},
 			link: function(scope){
 				scope.r = 0.00;
@@ -39,15 +45,37 @@ angular.module('Josefin')
 				//A layout can store 16 images. 1 post makes 1 image. 
 				var l = 8.00;
 				
-				//Get all posts labled work and calculate number of layouts to generate
-				post.work().success(function(res){
-					scope.posts = res;
-					
-					//Get the number of posts
-					angular.forEach(res, function() {
-					   scope.x += 1;
+				//Get all posts labled work and calculate number of layouts to render
+				if(scope.page === 'works') {
+					post.work().success(function(res){
+						scope.posts = res;
+						
+						//Get the number of posts
+						angular.forEach(res, function() {
+						   scope.x += 1;
+						});
+						
+						scope.x = scope.x;
+						scope.calculation(scope.x);	
 					});
 					
+				} else if (scope.page === 'exhibition') {
+					post.exhibition().success(function(res){
+						scope.posts = res;
+						
+						//Get the number of posts
+						angular.forEach(res, function() {
+						   scope.x += 1;
+						});
+						
+						scope.x = scope.x;
+						scope.calculation(scope.x);	
+					});
+				}
+				
+				//Function to calculate the number of layoutblocks to render
+				scope.calculation = function(num){
+					scope.x = num;
 					scope.x = scope.x;	
 					scope.r = scope.x/l; 
 					
@@ -72,8 +100,11 @@ angular.module('Josefin')
 					} else if (hasDecimals !== 0) {
 						scope.r = Math.round(scope.r);
 					}
-				});
-	
+					return scope.r;
+					
+				};
+
+				//Render the layoutblocks
 				scope.createLayoutBlock = function(n) {		
 					return new Array(n);	
 				};

@@ -14,6 +14,10 @@ angular.module('Josefin')
 			exhibition: function($routeParams) {
 				return $http({method: 'GET', url: 'wp-json/posts/?filter[cat]=19&filter[posts_per_page]=999'});
 			},
+			slides: function($routeParams) {
+				return $http({method: 'GET', url: 'http://www.qcumber.no/Josefin/wordpress/wp-json/posts/?filter[cat]=39&filter[posts_per_page]=999'});
+			},
+			
 		};
 	}]);
 	

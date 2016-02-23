@@ -2,7 +2,14 @@
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
 .post { 
-margin-top: 4rem;;
+	margin-top: 0;
+}
+
+.entry-title {
+	position: absolute;
+    top: 60px;
+    left: 20px;
+    z-index: 10;
 }
 
 

@@ -1,0 +1,24 @@
+<div class="file-upload-wrap" layout="column">
+	<div
+        class="btn file-uploader" 
+        ngf-select
+        name="file"
+        ngf-change="upload($files)"
+        ngf-accept="'.pdf,.doc,.docx'"  
+        accept=".doc, .pdf"
+        ng-model-rejected="rejFiles"
+        ngf-max-size="10485760">Upload CV    
+    </div>
+    <ul ng-show="rejFiles.length > 0" class="file-validation">
+        <li ng-repeat="f in rejFiles" ng-show="f.$error == 'accept'">
+            {{f.name}} is not a PDF or DOC(X) file.
+        </li>
+        <li ng-repeat="f in rejFiles" ng-show="f.$error == 'maxSize'">
+            {{f.name}} is bigger then 10 MB. Please submit a smaller file.
+        </li>
+    </ul>
+    <p ng-show="!formState.fileLoaded" class="complete">Please upload your CV. Only .pdf, .doc and .docx is accepted</p>
+    <p class="progress">{{progress}}</p>
+    <p class="complete">{{complete}}</p>
+    <p class="complete">{{errors}}</p>
+</div>

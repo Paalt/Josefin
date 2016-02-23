@@ -6,23 +6,22 @@
 	#menu-toggle {
 		background-color: #fff;
 		border: 1px solid #fff;
-		margin-bottom: 1rem;
-		margin-top: 2rem;
-		padding: 20px;
-		-webkit-transform: rotate(360deg);  /* to support Safari and Android browser */
-    	-ms-transform: rotate(360deg);  /* to support IE 9 */
-    	transform: rotate(360deg);
-		-webkit-transition: rotate 100ms ease-out;
-		-moz-transition: rotate 100ms ease-out;
-		-o-transition: rotate 100ms ease-out;
-		transition: rotate 100ms ease-out;
+		padding: 0;
+		position: relative;
+		right: 4.7rem;
+		-webkit-transition: right 0.3s ease;
+    	transition: right 0.3s ease;
 	}
 	
-	#menu-toggle:hover {
-		-webkit-transform: rotate(-90deg);  /* to support Safari and Android browser */
-    	-ms-transform: rotate(-90deg);  /* to support IE 9 */
-    	transform: rotate(-90deg);
+	.sidebar.expanded #menu-toggle {
+		right: 0.15rem;
 	}
+	
+	/** Buttons **/
+	/* Remove outline blue border on buttons from chrome */
+	button:focus {
+		outline: none;
+		}
 	
 	.btn {
 		padding: 5px 30px 5px 30px;
@@ -33,6 +32,133 @@
 		letter-spacing: 0.1rem;
 	}
 	
-	input[type=submit] {
+	button[disabled] {
+		background-color: $bg;
+		color: $main;
+	}
+	
+	input:focus, textarea:focus, select:focus {
+		outline: none;
+	}
+	
+	.file-uploader {
+		margin: auto;
+	}
+	
+	/* Requires special styling to ovveride browser defaults */
+	select, select:focus {
+		background-color: $bg;
+		border: 0 !important;
+  		outline-offset: -1px;
+  		outline: 1px inset black;
+	}
+	
+	/* Text fields */
+	input[type=text], textarea, select {
+		border: 1px solid $main;
+		padding: 1rem 1rem 0.5rem 1rem;
+		font-family: $main-font;
+		font-size: 0.6rem;
+		letter-spacing: 0.1rem;
+		width: 100%;
+	}
+	
+	input[type=number] {
+		@extend input[type=text];
+	}
+	
+	input[type=email] {
+		@extend input[type=text];
+	}
+	
+	input[type=date] {
+		@extend input[type=text];
+	}
+	
+	
+	/* Radio Buttons */
+	
+	.radio-nav .radio-group .radio {
+		label {
+			background-color: $main;
+			color: $bg;
+			font-family: $main-font;
+			font-size: 0.8rem;
+			letter-spacing: 0.1rem;
+			padding: 1rem;
+			display: block;
+			cursor: $cursor;
+			input[type=radio] {
+				display: none;
+			}
+		}
+		label:hover {
+			background-color: $bg;
+			color: $main;
+		}
 		
-		}	
+		label.active {
+			background-color: $bg;
+			color: $main;
+			border: none;
+		}
+		
+		label.active:hover {
+			background-color: $main;
+			color: $bg;
+		}
+	}
+	
+	.radio-btn .radio-group .radio {
+		label {
+			background-color: $bg;
+			color: $main;
+			font-family: $main-font;
+			font-size: 0.8rem;
+			letter-spacing: 0.1rem;
+			padding: 1rem;
+			display: block;
+			cursor: $cursor;
+			input[type=radio] {
+				display: none;
+			}
+			span {
+				display:inline-block;
+				width:19px;
+				height:19px;
+				margin:-1px 4px 0 0;
+				vertical-align:middle;
+				cursor:pointer;
+				-moz-border-radius:  50%;
+				border-radius: 50%;
+				border: 1px solid $main;
+				background-color: $bg;
+			}
+		}
+		
+		label.active span {
+			background-color: $main;
+			border: nonen;
+		}
+		
+		label span, label.active span {
+			-webkit-transition:background-color 0.4s linear;
+			-o-transition:background-color 0.4s linear;
+			-moz-transition:background-color 0.4s linear;
+			transition:background-color 0.4s linear;
+		}
+			
+		label:hover {
+			color: $main;
+		}
+		
+		label.active {
+			color: $main;
+		}
+		
+		label.active:hover {
+			color: $main;
+		}
+	}
+	
+	

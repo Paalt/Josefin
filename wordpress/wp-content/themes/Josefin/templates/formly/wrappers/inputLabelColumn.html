@@ -1,0 +1,8 @@
+<div layout="column" class="vertical-field">
+    <label flex="40" for="{{id}}" class="label" ng-if="to.label">
+        {{to.label}}
+        <span class="required">{{to.required ? '*' : ''}}</span>
+    </label>
+    <formly-transclude></formly-transclude>
+    <span ng-if="options.data.denomination" class="denomination">{{options.data.denomination}}</span>
+</div>

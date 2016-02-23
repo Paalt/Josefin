@@ -20,12 +20,12 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
     <div class="wrap container" role="document">
-      <div layout="row" ng-controller="categoryController as catCtrl">
-        <main flex="80" class="main" role="main">
+      <div ng-controller="categoryController as catCtrl">
+        <main class="main" role="main">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Config\display_sidebar()) : ?>
-          <aside flex="20" class="sidebar" role="complementary">
+          <aside class="sidebar" role="complementary" ng-controller="mainMenuCtrl as menuCtrl" ng-class="{expanded: !toggleMenu}">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>

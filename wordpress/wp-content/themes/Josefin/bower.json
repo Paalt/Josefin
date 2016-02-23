@@ -2,23 +2,38 @@
   "name": "sage",
   "homepage": "https://roots.io/sage/",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Qcumber <paal.taule@qcumber.com>"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "modernizr": "2.8.2",
-    "angular-material": "~0.10.0",
-    "angular": "~1.4.1",
-    "angular-resource": "~1.4.1",
-    "angular-sanitize": "~1.4.1",
+    "modernizr": "~3.3.1",
+    "angular-material": "~1.0.5",
+    "angular": "~1.5.0",
+    "angular-resource": "~1.5.0",
+    "angular-sanitize": "~1.5.0",
     "api-check": "~7.5.0",
-    "angular-formly": "~6.15.1",
-    "swiper": "~3.0.8"
+    "angular-formly": "~7.3.9",
+    "swiper": "~3.3.1",
+    "angular-messages": "~1.5.0",
+    "ng-file-upload": "~11.2.3",
+    "bootstrap-sass-official": "~3.3.6"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
     }
+  },
+  "resolutions": {
+    "modernizr": "~3.3.1",
+    "angular-material": "~1.0.5",
+    "angular-resource": "~1.5.0",
+    "angular": "~1.5.0",
+    "angular-sanitize": "~1.5.0",
+    "angular-formly": "~7.3.9",
+    "swiper": "~3.3.1",
+    "angular-messages": "~1.5.0",
+    "ng-file-upload": "~11.2.3",
+    "bootstrap-sass-official": "~3.3.6"
   }
 }

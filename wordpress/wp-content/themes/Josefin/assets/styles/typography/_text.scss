@@ -10,6 +10,7 @@
 	p {
 	  padding-bottom: 1em;
 	  font-family: $main-font;
+	  cursor: text;
 	}
 	
 	/* Blockquote */
@@ -25,4 +26,9 @@
 	  margin: 0;
 	  padding: 0;
 	  list-style: none;
+	}
+	
+	/* Bold text */
+	strong, b {
+		font-size: 0.9rem;
 	}

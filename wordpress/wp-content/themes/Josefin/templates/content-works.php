@@ -1,1 +1,1 @@
-<work-categories></work-categories>
+<work-categories page="works"></work-categories>

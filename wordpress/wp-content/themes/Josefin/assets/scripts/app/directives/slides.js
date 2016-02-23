@@ -10,7 +10,7 @@ angular.module('Josefin')
 			}
     	};
 	})
-	.directive('exhibitionGalleryItem', ['SiteURL', 'post', function(SiteURL, post) {
+	.directive('slides', ['SiteURL', 'post', function(SiteURL, post) {
 		"use strict";
 		return {
 			replace: true,
@@ -18,21 +18,20 @@ angular.module('Josefin')
 			scope: {
 				activeExhibition: "="
 			},
-			templateUrl: SiteURL + "directives/exhibition-gallery-item.php",
+			templateUrl: SiteURL + "directives/slides.php",
 			link: function(scope){
 				var h = window.innerHeight;
 				var mySwiper = new Swiper ('.swiper-container', {
 					// Optional parameters
-					direction: 'vertical',
-					freeModeMomentum: true,
-					freeModeMomentumRatio: 1,
+					direction: 'horizontal',
+					loop: true,
+					slidesPerView: 1,
+					keyboardControl: true,
+					grabCursor: true,
+					resistance: false,
 					speed: 1000,
 					mousewheelControl: true,
 					paginationHide: true,
-					// Navigation arrows
-					nextButton: '.carousel-button-next',
-					prevButton: '.carousel-button-prev',
-					loop: false,
 					height: h,
 					
 					// If we need pagination
@@ -41,9 +40,9 @@ angular.module('Josefin')
 					paginationBulletRender: function (index, className) {
 					  return '<span class="' + className + '">' + (index + 1) + '</span>';
 					}
-					});   
+				});   
 					
-				post.exhibition().success(function(res){
+				post.slides().success(function(res){
 					scope.posts = res;
 				});
 				

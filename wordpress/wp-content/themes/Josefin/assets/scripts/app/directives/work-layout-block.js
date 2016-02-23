@@ -15,11 +15,17 @@ angular.module('Josefin')
 				scope.byBlock = workCategoriesCtrl.incrementByOne();
 				scope.byPostLargeMedium = workCategoriesCtrl.incrementByTwo();
 				scope.byPostSmall = workCategoriesCtrl.incrementByFour();
+				scope.active = workCategoriesCtrl.active();
 				
-				post.work().success(function(res){
-					scope.posts = res;
-				});	
-
+				if(scope.active === 'works') {
+					post.work().success(function(res){
+						scope.posts = res;
+					});	
+				} else if (scope.active === 'exhibition') {
+					post.exhibition().success(function(res){
+						scope.posts = res;
+					});	
+				}
 			}	
 		};
 	}]);

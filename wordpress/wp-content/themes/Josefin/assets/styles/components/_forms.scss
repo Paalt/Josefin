@@ -1,0 +1,124 @@
+.contact-formly {
+	margin-top: 4rem;
+	padding: 1rem;
+}
+	
+.form-group, .vertical-field {
+	max-width: 400px;
+	margin: auto;
+	padding: 1rem 0 1rem 0;
+}
+
+.vertical-field .form-group {
+	padding: 0;
+	margin: 0;
+}
+
+label {
+	background-color: $main;
+	color: $bg;
+	font-family: $main-font;
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	padding: 1rem 1rem 0.5rem 1rem;
+	display: block;
+	cursor: $cursor;
+}
+	
+.required {
+	color: $bg;
+}
+	
+.file-upload-wrap {
+	margin: auto;
+}
+
+.autocomplete li {
+	padding: 10px;
+	border: solid $main 1px;
+	font-size: 0.7rem;
+}
+
+.autocomplete>.active>a, .autocomplete>.active>a:focus, .autocomplete>.active>a:hover {
+	outline: none;
+	color: $bg;
+	text-decoration: none;
+	background-color: $main;
+}
+
+
+div[ng-message=required], div[ng-message=alphaNumeric], div[ng-message=minlength], div[ng-message=maxlength], div[ng-message=number], div[ng-message=email], div[ng-message=age] {
+	font-family: $main-font;
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	padding: 1rem 1rem 0.5rem 1rem;
+}
+
+/* Validations */
+	
+.has-error {
+	border: red 2px solid !important;
+}	
+
+.is-valid {
+	border: solid 2px rgba(23,121,0,1.00) !important;
+}
+
+.progress, .complete {
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	padding: 10px;
+}
+
+.file-validation li {
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.error, .success {
+	font-size: 1.3rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-width: 1px;
+	padding: 1rem;
+}
+
+.error {
+	border-color: red;
+}
+
+.success {
+	border-color: green;
+}
+
+.response {
+	border-top-style: solid;
+}
+
+.error-response {
+	border-bottom-style: solid;
+}
+
+/* Denominations */
+.denomination {
+	@extend label;
+	color: $main;
+	background-color: $bg;
+}
+
+.digit.formly-field-digit > div > div > input {
+	width: 15%;
+	padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.formly-field-group {
+	margin-bottom: 5rem;
+	}
+
+
+	

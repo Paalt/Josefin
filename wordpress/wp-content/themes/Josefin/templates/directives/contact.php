@@ -8,7 +8,7 @@
         </article>
         <article class="contact-form">
             <p>FOR BOOKING OR WORK REQUESTS:</p>
-            <input class="btn" type="submit" id="contactBtn" value="REQUEST"></input>
+            <input class="btn" type="button" id="contactBtn" value="REQUEST" onClick="location.href='/Josefin/wordpress/booking'"></input>
         </article>
         <article class="studio-item" ng-repeat="post in posts | filter: {terms: {category: {name: 'studio'}}}">
             <header ng-if="$index === 2" class="contact-heading">
@@ -37,7 +37,7 @@
             <p ng-bind-html="post.content | uppercase"></p>
         </article>
     </section>
-    <footer id="conatct-footer">
-    	<img src="http://www.qcumber.no/Josefin/wordpress/wp-content/uploads/2015/06/20150107_MAP.jpg" alt="map">
+    <footer id="contact-footer">
+    	<a href="https://goo.gl/maps/BLK4I"><img src="http://www.qcumber.no/Josefin/wordpress/wp-content/uploads/2015/06/20150107_MAP.jpg" alt="Map"></a>
     </footer>
 </div>

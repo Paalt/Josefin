@@ -5,7 +5,7 @@
 	/** LAYOUTS **/
 	
 	.wrap.container {
-		margin: auto;
+		margin: 0 10.9% 0 10.9%;
 		}
 	
 	@media only screen 
@@ -229,14 +229,41 @@
 	/*** WORK IMAGE FEED ***/
 	.work-container {
 		margin: 20px;
-		}
+		position: relative;
+	}
 	
 	.work-title {
-		padding-top: 1rem;
+		cursor: pointer;
 		text-align: center;
 		font-size: 0.6rem;
 		letter-spacing: 0.4rem;
-		}
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background-color: $main;
+		color: $bg;
+		margin: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		opacity: 0;
+		-webkit-transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out; /* Safari */
+    	transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+	}
+	
+	.large-post .work-container .work-title, .medium-post .work-container .work-title {
+		padding-top: 50%;
+	}
+	
+	.small-post .work-container .work-title {
+		padding-top: 4rem;
+	}
+	
+	.work-title:hover {
+		opacity: 1;
+		margin: 1rem;
+	}
 		
 	/*------------------------------------*\
     	#CONTACT
@@ -247,8 +274,11 @@
 		margin-top: 8rem;
 		}
 	
-	.studio-item, .contact-form, .employees {
+	.studio-item, .contact-form {
 		margin: auto;
+	}
+	
+	.studio-item, .contact-form, .employees {
 		width: 60%;
 		text-align: center;
 	}
@@ -262,7 +292,7 @@
 		font-size: 0.7rem;
 		letter-spacing: 0.1rem;
 		padding-bottom: 0.2em;
-		}
+	}
 	
 	.contact-heading h2 {
 		margin-top: 2rem;
@@ -273,7 +303,7 @@
 	.employee-name h2 {
 		font-size: 0.9rem;
 		letter-spacing: 0.1rem;	
-		}
+	}
 	
 	.contact-form {
 		margin-bottom: 4rem;
@@ -281,14 +311,14 @@
 	
 	#employees-list {
 		margin-top: 4rem;
-		}
+	}
 	
 	#conatct-footer {
 		margin-top: 4rem;
-		}	
+	}	
 	
 	/*------------------------------------*\
-    	#EXHIBITIONS
+    	#CAROUSEL
 	\*------------------------------------*/
 	
 	/*** SWIPER CAROUSEL***/
@@ -296,6 +326,7 @@
         width: 100%;
         height: 100%;
     }
+	
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -314,24 +345,6 @@
         -webkit-align-items: center;
         align-items: center;
     } 
-	
-	.carousel-button-prev, .carousel-button-next {
-		z-index: 99;
-		height: 20px;
-		width: 17px;
-		right: 20px;
-		position: absolute;	
-	}
-	
-	.carousel-button-prev {
-		background-image: url(http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/arrow-up.svg);
-		top: 200px;
-		}
-	
-	.carousel-button-next {
-		background-image: url(http://www.qcumber.no/Josefin/wordpress/wp-content/themes/Josefin/dist/images/arrow-down.svg);
-		top: 250px;
-		}
 		
 	.swiper-container-vertical>.swiper-pagination {
 		right: 25%;
@@ -348,28 +361,59 @@
 		visibility: visible;
 		}
 	
-	.ett-bilde, .to-bilder, .etth-bilde-ettv-tekst {
+	.ett-bilde, .to-bilder, .etth-bilde-ettv-tekst, .ettv-bilde-etth-tekst {
 		width: 100%;	
 	}
 	
-	.ett-bilde > article > p > a > img {
-		width: 80%;	
+	.ett-bilde > footer > p, .to-bilder > footer > p, .etth-bilde-ettv-tekst > footer > p, .ettv-bilde-etth-tekst > footer > p {
+		text-align: right;
 	}
 	
-	.etth-bilde-ettv-tekst > article > p {
-		display: inline-block;
+	.ett-bilde > article > p > a > img {
+		max-width: 55%;	
+	}
+	
+	.etth-bilde-ettv-tekst > article > p > strong, .ettv-bilde-etth-tekst > article > p > strong {
+		font-weight: bold;
+		font-size: 1rem;
+		line-height: 1.2;
+		letter-spacing: 0.2rem;
+	}
+	
+	 .ettv-bilde-etth-tekst > article > p:not(:first-child), .etth-bilde-ettv-tekst > article > p:not(:first-child) {
 		vertical-align: middle;
-		padding: 4rem;	
+		text-align: center;
+		display: inline-block;
+		padding: 0 1em 0.2 1em;
+		text-transform: uppercase;
+		letter-spacing: 0.1rem;
+	}
+	
+	.etth-bilde-ettv-tekst > article > p:not(:first-child), .ettv-bilde-etth-tekst > article > p:not(:first-child) {
+		max-width: 40%;
+		min-width: 35%;
+		line-height: 1;
+		font-size: 0.75rem;
+	}
+	
+	.etth-bilde-ettv-tekst > article > p:nth-child(2), .ettv-bilde-etth-tekst > article > p:nth-child(2) {
+		padding-top: 8em;
 	}
 	
 	.etth-bilde-ettv-tekst > article > p:first-child {
-		width: 40%;
-		font-size: 6rem;
+		max-width: 55%;
+		text-align: center;
+		float: right;
 	}
 	
-	.etth-bilde-ettv-tekst > article > p:last-child  {
-		width: 55%;
+	.ettv-bilde-etth-tekst > article > p:first-child {
+		max-width: 55%;
 		text-align: center;
+		float: left;
+	}
+	
+	.ettv-bilde-etth-tekst > article > p > a > img, .etth-bilde-ettv-tekst > article > p > a > img {
+		max-height: 70vh;
 	}
 	
 	.to-bilder > article > p > a > img {
@@ -378,14 +422,47 @@
 	}
 	
 	.to-bilder > article > p > a:first-child > img {
-		width: 60%;	
+		max-width: 55%;	
 	}
 	
 	.to-bilder > article > p > a:last-child > img {
-		width: 40%;
+		max-width: 40%;
 		
 	}
+	
+	.container p a:hover {
+		border: none;
+	}
 
+	.feedcontainer {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5rem;
+		margin-bottom: 0;
+	}
+
+	.feedgrid {
+		margin: 0 auto;
+		text-align: left;
+		display: block;
+		
+		li {
+			float: left;
+			padding: 20px
+		}
+		
+		li a:hover {
+			border: none;
+		}
+		
+		li a img {
+			width: 280px;
+			height: 280px;
+			display: block;
+			border: none;
+		}
+	}
 	
 	
 	

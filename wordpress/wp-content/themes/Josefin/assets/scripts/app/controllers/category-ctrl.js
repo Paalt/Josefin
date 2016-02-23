@@ -3,5 +3,6 @@ angular.module('Josefin')
 		"use strict";
 		$scope.category = "";
 		$scope.activeExhibition = "";
+		$scope.page = "";
 	}]);
 	

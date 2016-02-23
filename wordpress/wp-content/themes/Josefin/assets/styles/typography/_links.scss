@@ -8,7 +8,7 @@
 		}
 		
 	a:hover {
-		text-decoration: underline;
+		border-bottom: 1px solid $main;
 		}
 		
 	a:active, a visited {
@@ -16,7 +16,9 @@
 		}
 	
 	.active {
-		text-decoration: underline;
+		border-bottom: 1px solid $main;
 		}
-	
+	.work-container a {
+		border-bottom: 0;	
+	}
 
