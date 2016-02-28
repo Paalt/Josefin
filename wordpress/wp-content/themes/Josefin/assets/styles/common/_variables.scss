@@ -15,6 +15,7 @@ $main-font : "Helvetica-Neue", "Helvetica Neue", Helvetica, Arial, "Lucida Grand
 ::-webkit-scrollbar {
     width: 20px;
    }
+   
 ::-webkit-scrollbar-thumb {
     border: 14px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;
@@ -30,6 +31,5 @@ html, body {
 	}
 	
 /** COLORS **/
-
 $main : rgb(15, 15, 15);
 $bg : rgb(255, 255, 255);

@@ -1,14 +1,14 @@
 angular.module('Josefin')
 	.directive('workCategories', ['post', 'SiteURL', function(post, SiteURL) {
-	"use strict";	
-	  return {
-		restrict: 'E',
-		replace: true,
-		templateUrl: SiteURL + 'directives/work-categories.php',
-		scope: {
-			page: '@'
-		},
-		controller: function($scope){
+	"use strict";
+		return {
+			restrict: 'E',
+			templateUrl: SiteURL + 'directives/work-categories.php',
+			scope: {
+				page: '@'
+			},
+			controller: function($scope){
+				/*
 				//Create incremental helper functions for the works display system
 				//For every 8 posts a new layout block is added to the DOM.
 				
@@ -36,9 +36,24 @@ angular.module('Josefin')
 				
 				this.active = function () {
 					return $scope.page;
-				};
+				};*/
 			},
-			link: function(scope){
+			link: function(scope) {
+				
+				scope.x = 0.00;
+				
+				post.work().success(function(res){
+					console.log(res);
+					scope.posts = res;
+					
+					//Get the number of posts
+					angular.forEach(res, function() {
+					   scope.x += 1;
+					});
+					
+					scope.x = scope.x;
+				});
+				/*
 				scope.r = 0.00;
 				scope.x = 0.00;
 				var r = 0.00;
@@ -103,11 +118,12 @@ angular.module('Josefin')
 					return scope.r;
 					
 				};
-
+	
 				//Render the layoutblocks
 				scope.createLayoutBlock = function(n) {		
 					return new Array(n);	
 				};
+				*/
 			}	
 		};
 	}]);
